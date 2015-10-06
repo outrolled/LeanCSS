@@ -9,7 +9,7 @@ LeanCSS is a lightweight framework that enables developers to create consistent 
 
 ## License
 To watch the demo go to:
-* MIT LICENSE: http://screencast.com/t/6I09YHc1sp9O
+* MIT LICENSE: http://leancss.com/license.html
 
 ## Author
 Rafael G. Martins
@@ -18,4 +18,4 @@ Rafael G. Martins
 * LeanCSS: http://leancss.com
 
 ## Maintained by:
-* Ouroll: https://outroll.com
+* Outroll: https://outroll.com
