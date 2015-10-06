@@ -1,5 +1,5 @@
 # LeanCSS
-A lightweight responsive CSS framework.
+A lightweight responsive CSS framework. Less than 5KB in size!
 
 ## Documentation
 <http://leancss.com>
