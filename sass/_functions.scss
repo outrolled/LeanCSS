@@ -1,0 +1,7 @@
+//Calculates grid widths automatically - tested with 2% margin and 4 columns
+// It takes 3 parameters, the width of the current column ($col), the total number of columns ($totalcol) and the margin as a percentage.
+
+@function calculate-grid($row, $totalrow, $margin){
+
+  @return ((100% - ($totalrow - $row + 1)*2% - 2%)/($totalrow/$row));
+}

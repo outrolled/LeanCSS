@@ -1,0 +1,59 @@
+//	Automatically calculated responsive grid
+
+//WHAT WAS THE GRID LOGIC ADOPTED?
+// It was a simple logic. On desktop devices the grid occupies the standard spaces. On tablets, the grid space is divided
+// by 2, and on mobile devices all grid spaces span one row.
+
+//Define grid struture
+
+//Container
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+
+//Common elements:
+[class*="col-"]{
+	margin-left:2%;
+	min-height: 1px;
+	float:left;
+}
+
+//Desktop grid - standard resolutions
+.col-1{
+	width: calculate-grid(1,4,2%);
+}
+
+.col-2{
+	width:calculate-grid(2,4,2%);
+}
+
+.col-3{
+	width:calculate-grid(3,4,2%);
+}
+
+.col-4{
+	width:calculate-grid(4,4,2%);
+	margin-right: 2%;
+}
+
+.row::after{
+	@extend %clearfix;
+}
+
+//Tablet devices
+@media (min-width: (481px)) and (max-width: (768px)){
+	.col-1, .col-2{
+		width: calculate-grid(2,4,2%);
+	}
+	.col-3, .col-4{
+		width: calculate-grid(4,4,2%);
+	}
+}
+
+// Mobile devices
+@media (max-width: (480px)){
+	.col-1, .col-2, .col-3, .col-4{
+		width: calculate-grid(4,4,2%);
+	}
+}

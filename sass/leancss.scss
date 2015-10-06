@@ -1,0 +1,174 @@
+/*! LeanCSS 1.0 | MIT License | github.com/outroll/leanCSS */
+/*! LeanCSS includes Normalize in itself */
+@import "normalize";
+
+/*! LeanCSS code starts here */
+/*! Magic happens below, simple lean magic. */
+@import "variables";
+@import "functions";
+@import "grid";
+@import "mixins";
+
+
+//Breadcrumbs
+.breadcrumbs{
+	width: 90%;
+	padding: $small-padding $standard-padding;
+	margin-bottom: $standard-margin;
+	list-style: none;
+	background-color: #ebebeb;
+	border-radius: $small-radius;
+		.active{ text-decoration: underline;}
+		li{
+			display:inline;
+		&::after{
+			content: " / ";
+		}}
+}
+//Buttons
+.btn {
+  border-radius: $small-radius;
+  text-shadow:none;
+  font-size: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  margin: $standard-margin 0;
+  @extend .link;
+}
+
+.btn:hover {
+  background: #777;
+  color: #fff;
+  text-decoration: none;
+}
+
+//Images
+.img-round{
+	border-radius: $small-radius;
+}
+
+.img-responsive{
+	width: 100%;
+	height: auto;
+}
+
+.img-circle{
+	border-radius: 50%;
+}
+
+//Menus
+.menu{
+	background-color: #888;
+	padding: $small-padding;
+	border-radius: $small-radius;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		overflow: auto;
+		li {
+			color: #ddd;
+			display:inline-block;
+		}
+	} a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 1em;
+		float: left;
+		&:hover {
+			color: #333;
+		}
+		}
+}
+
+//Code
+code{
+	background-color: #000;
+	color: #fff;
+	padding: $standard-padding;
+	border-radius: $small-radius;
+	display:inline-block;
+	width: 90%;
+}
+
+//Input
+input, select, textarea{
+	border-radius: $small-radius;
+	width: 90%;
+	padding: $small-padding;
+	border: 1px solid #666;
+}
+
+//Shadows
+.shadow-sm{
+	text-shadow: 1px 1px 2px #000;
+}
+
+.shadow-md{
+	text-shadow: 2px 2px 3px #000;
+}
+.shadow-lg{
+	text-shadow: 3px 3px 3px #000;
+}
+
+//Tables
+
+.table{
+	width: 90%;
+	tr{
+		border-bottom: 1px solid #999;
+		&:first-of-type{
+		border-bottom: 2px solid #777;
+	}}
+}
+
+//Colors
+.red{
+	background-color: red;
+}
+.green{
+	background-color: green;
+}
+.blue{
+	background-color: blue;
+}
+.yellow{
+	background-color: yellow;
+}
+.orange{
+	background-color: orange;
+}
+.pink{
+	background-color: pink;
+}
+.brown{
+	background-color: brown;
+}
+.black{
+	background-color: black;
+	color:#fff;
+}
+.teal{
+	background-color: teal;
+}
+.gold{
+	background-color: gold;
+}
+.silver{
+	background-color: silver;
+}
+.purple{
+	background-color: purple;
+}
+
+
+//General Styles
+.inline{
+	display: inline-block;
+	margin: 0.3em 0;
+}
+
+.cleanlink{
+	color: #fff;
+}
