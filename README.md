@@ -18,4 +18,4 @@ Rafael G. Martins
 * LeanCSS: http://leancss.com
 
 ## Maintained by:
-* Ouroll: https://outroll.com
+* Outroll: https://outroll.com
