@@ -1,8 +1,8 @@
 //	Automatically calculated responsive grid
 
 //WHAT WAS THE GRID LOGIC ADOPTED?
-// It was a simple logic. On desktop devices the grid occupies the standard spaces. On tablets, the grid space is divided
-// by 2, and on mobile devices all grid spaces span one row.
+// The grid ocupies the standard slots on desktop, the smallest 6 columns occupy 2 columns on tablets and on mobile devices 
+//col-1 and col-2 occupy 2 columns and all other elements occupy all space.
 
 //Define grid struture
 
@@ -21,39 +21,85 @@
 
 //Desktop grid - standard resolutions
 .col-1{
-	width: calculate-grid(1,4,2%);
+	width: calculate-grid(1,12,2%);
 }
 
 .col-2{
-	width:calculate-grid(2,4,2%);
+	width:calculate-grid(2,12,2%);
 }
 
 .col-3{
-	width:calculate-grid(3,4,2%);
+	width:calculate-grid(3,12,2%);
 }
 
 .col-4{
-	width:calculate-grid(4,4,2%);
-	margin-right: 2%;
+	width:calculate-grid(4,12,2%);
 }
 
+.col-5{
+	width:calculate-grid(5,12,2%);
+}
+
+.col-6{
+	width:calculate-grid(6,12,2%);
+}
+
+.col-7{
+	width:calculate-grid(7,12,2%);
+}
+
+.col-8{
+	width:calculate-grid(8,12,2%);
+}
+
+.col-9{
+	width:calculate-grid(9,12,2%);
+}
+
+.col-10{
+	width:calculate-grid(10,12,2%);
+}
+
+.col-11{
+	width:calculate-grid(11,12,2%);
+}
+
+.col-12{
+	width:calculate-grid(12,12,2%);
+	margin-right: 2%;
+}
 .row::after{
 	@extend %clearfix;
 }
 
 //Tablet devices
 @media (min-width: (481px)) and (max-width: (768px)){
-	.col-1, .col-2{
-		width: calculate-grid(2,4,2%);
-	}
-	.col-3, .col-4{
-		width: calculate-grid(4,4,2%);
-	}
+
+.col-1, .col-2, .col-3, .col-4, .col-5{
+	width:calculate-grid(6,12,2%);
+}
+
+.col-1:nth-of-type(odd), .col-2:nth-of-type(odd), .col-3:nth-of-type(odd), .col-4:nth-of-type(odd), .col-5:nth-of-type(odd){
+	clear:both;
+}
+
+.col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+	width:calculate-grid(12,12,2%);
+	margin-right: 2%;
+}
+
 }
 
 // Mobile devices
 @media (max-width: (480px)){
-	.col-1, .col-2, .col-3, .col-4{
-		width: calculate-grid(4,4,2%);
-	}
+.col-1, .col-2{
+		width: calculate-grid(6,12,2%);
+}
+.col-1:nth-of-type(odd), .col-2:nth-of-type(odd){
+	clear:both;
+}
+.col-3, .col-4, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+	width:calculate-grid(12,12,2%);
+	margin-right: 2%;
+}
 }
